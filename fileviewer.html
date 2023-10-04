@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Viewer</title>
+</head>
+<body>
+    <input type="file" id="fileInput">
+    <div id="fileContents"></div>
+
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const fileContents = document.getElementById('fileContents');
+
+        fileInput.addEventListener('change', (event) => {
+            let selectedFile = event.target.files[0];
+            
+            if (selectedFile) {
+                const reader = new FileReader();
+
+                reader.onload = (e) => {
+                    const fileData = e.target.result;
+                    fileContents.textContent = fileData; // Display the file data
+                };
+
+                reader.readAsText(selectedFile); // You can change this to other read methods like readAsDataURL for images.
+            } else {
+                fileContents.textContent = 'No file selected.';
+            }
+        });
+    </script>
+</body>
+</html>
