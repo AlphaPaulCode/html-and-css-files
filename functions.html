@@ -27,21 +27,47 @@
 //    }
 //    convertToFahren (30);
 
-//    function celcuis(fahrenheit) {
-//     console.log(fahrenheit - 32) * 5/9
+//    function celcuis(f,d) {
+//     console.log(2 + 2);
 //    }
-//    celcuis()
+//    celcuis();
+   
+ 
+        // function outer(){
+        //     console.log('out');
+        //     function inner(){
+        //       console.log('in');
+        //     }
+        //     inner();
+        // }
+        // outer();
+
+        //   function food(bar){
+        //     bar();
+        //   }
+        //   food(function (){
+        //     console.log('i am a vampire');
+        //   }
+        //   )
+
+        // function name(){
+        //     console.log('barn')
+        // }
+        // food(name);
 
 
-        function outer(){
-            console.log('out');
-            function inner(){
-              console.log('in');
-            }
-            inner();
+        function water(count){
+            if(count === 0){
+                console.log("water is cold");
+                return;
+            } 
+            console.log("water is hot");
+            water(count - 1);
         }
-        outer();
+          water(5);
+         
+          
 
      </script>
     </body>
-</html>
+</html> 
