@@ -38,6 +38,8 @@
         <script>
             let calculation = "";
 
+            JSON.parse(localStorage.getItem('calculation'));
+
             function addCalculation(value) {
                 calculation += value;
                 console.log(calculation);
@@ -52,6 +54,7 @@
                 }
             }
 
+            localStorage.setItem('calculation',JSON.stringify(calculation));
             function Cleared(){
                 calculation = "";
                 console.log('Cleared');

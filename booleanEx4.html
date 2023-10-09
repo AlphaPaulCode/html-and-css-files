@@ -18,21 +18,56 @@
         </button> -->
 
         <button onclick="
-        let random = Math.randoma();
-        let computermove = '';
-          if(random >0.5){
-            
-          }
-
+        playGame('Heads');
         ">
             head
         </button>
 
 
-        <button>
+        <button onclick="
+        playGame('Tails');
+        ">
             Tails
         </button>
 
-        
+        <script>
+                   result = "";
+                   let computermove = pickCompuerMove();
+
+            function playGame(guess){
+                   if(guess === 'Heads'){
+                    if (computermove === 'Tails'){
+                        result = 'You win';
+                    }
+                   }
+                   else if (guess === 'Tails'){
+                    if (computermove === 'Heads'){
+                        result = 'You Lose';
+                    }  
+                   }
+                   if (guess === 'Heads' && computermove === 'Heads'){
+                    alert (`No Winner`)
+                   }         
+                   if (guess === 'Tails' && computermove === 'Tails'){
+                    alert (`No Winner`)
+                   } 
+                   alert(`You Picked ${guess}, Computer Picked ${computermove}, ${result}`)
+                    
+            }
+            
+
+            function pickCompuerMove(){
+                let randomnumber = Math.random();
+                let computermove = "";
+
+                if(randomnumber = 2){
+                    computermove = 'Tails';
+                }
+                else if (randomnumber = 2){
+                    computermove = "Heads";
+                }
+                return computermove
+            }
+        </script>
     </body>
 </html>
