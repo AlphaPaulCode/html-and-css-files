@@ -24,3 +24,69 @@ nav{
      cursor: pointer;
      margin-left: 30px;
 }
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+.subMenuWrap{
+    position: absolute;
+    top: 100%;
+    right: 10%;
+    width: 320px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+} 
+.subMenuWrap.openMenu{
+    max-height: 400px;
+}
+.subMenu{
+    background: white;
+    padding: 20px;
+    margin: 10px;
+}  
+.userInfo{
+    display: flex;
+    align-items: center;
+}
+.userInfo h2{
+    font-weight: 500;
+}
+.userInfo img{
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.subMenuLink{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #d9e9e4;
+    margin: 12px 0;
+}
+.subMenuLink p{
+    width: 100%;
+}
+.subMenuLink{
+    width: 40px;
+    background: #d9e9e4;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 15px; 
+}
+.subMenuLink img{
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 15px;
+}
+.subMenuLink span{
+    font-size: 22px;
+    transition-duration: 2s;
+}
+.subMenuLink:hover span{
+    transform: translateX(5px);
+}
+.subMenuLink:hover p{
+    font-weight: 600;
+}

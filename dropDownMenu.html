@@ -8,15 +8,54 @@
     </head>
     <body>
         <div class="hero">
-            <nav>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Features</a></li>
-                    <li><a href="">About</a></li>
-                    </ul>
-                <img src="dropdown.jpg" width="100" height="100" class="userPic">
-            </nav>
+        <nav>
+    <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Features</a></li>
+        <li><a href="">About</a></li>
+        </ul>
+    <img src="dropdown.jpg" width="40" height="40" 
+    class="userPic" onclick="toggleMenu()">
+    
+
+    <div class="subMenuWrap" id="subMenu">
+        <div class="subMenu">
+            <div class="userInfo">
+        <img src="dropdown.jpg" width="40" height="40">
+        <h2>Paul</h2>
+    </div>
+
+    <a href="" class="subMenuLink">
+        <img src="dropdown.jpg" width="40" height="40">
+        <p>Edit Profile</p>
+        <span>></span>
+    </a>
+
+    <a href="" class="subMenuLink">
+        <img src="dropdown.jpg" width="40" height="40">
+        <p>Setings and Privacy</p>
+        <span>></span>
+    </a>
+
+    <a href="" class="subMenuLink">
+        <img src="dropdown.jpg" width="40" height="40">
+        <p>Log Out</p>
+        <span>></span>
+    </a>
+
         </div>
 
+    </div>
+        </nav>
+        </div>
+
+
+        <script>
+             subMenu = document.getElementById("subMenu");
+
+             function toggleMenu(){
+                subMenu.classList.toggle("openMenu");
+             }
+        </script>
     </body>
 </html>
