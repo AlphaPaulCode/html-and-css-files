@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Excercises</title>
+    </head>
+    <body>
+        <!-- <button>9a</button>
+        <button class="jsButton">9b</button> -->
+
+        <!-- <button onclick="
+        play();
+        ">heads</button>
+
+        <button onclick="
+        play2();
+        ">Tails</button>
+
+        <p class="jsResult"></p> -->
+
+        <input class="jsInputText" placeholder="Name">
+
+        <button 
+        onclick="textInput()"
+        class="jsSubmit">Submit</button>
+        <script>
+        // console.log(document.querySelector('button').innerHTML);
+
+        // let buttonElement = document.querySelector('.jsButton')
+        // .innerHTML = '9b Done';
+        
+        // console.log(buttonElement);
+
+        // function play(){
+        //     document.querySelector('.jsResult').innerHTML =
+        //     `You Picked: Heads`
+        // }
+
+        // function play2(){
+        //     document.querySelector('.jsResult').innerHTML =
+        //     `You Picked: Tails`
+        // }
+
+        function textInput(){
+        let inputElement = document.querySelector('.jsInputText');
+        let prints = inputElement.value;
+        document.querySelector('.jsInputText').innerHTML = 
+        `Your name is ${prints}`;
+        }
+       
+        </script>
+    </body>
+</html>

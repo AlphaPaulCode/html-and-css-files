@@ -86,7 +86,6 @@ a{
     .socialIcons {
         flex: 0 1 30%;
         display: block;
-        
     }
     .socialIcons .fab{
         color: #fff;
@@ -98,3 +97,5 @@ a{
         padding: 0 20px;
     }
 }
+
+
