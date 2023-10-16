@@ -43,10 +43,10 @@ hr{
     margin-top: 20px;
 }
 button {
-    background-color: rgb(212, 212, 139);
+    background-color: orange;
     padding: 10px 20px;
     border: none;
-    color: black;
+    color: white;
     font-weight: bold;
     cursor: pointer;
     margin-top: 50px;
