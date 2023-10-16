@@ -26,17 +26,17 @@
         function handleCostKeyDown(){
             if(event.key === 'Enter'){
         calculateTotal();
-        }
+        } 
         }
             
         function calculateTotal(){
         let inputElement = document.querySelector('.jsCostInput');
-        let cost = Number(inputElement.value);
+        let cost = parseFloat(inputElement.value);
         if(cost < 40){
             cost += 10;
         }
         document.querySelector('.jstotalCost').innerHTML = 
-        `$${cost}`;
+        `$${cost.toFixed(2)}`;
           }
 
              function Subscribe(){

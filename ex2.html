@@ -7,17 +7,14 @@
 </head>
 <body>
     <button onclick="
-         if(cartqty > 10){
-            console.log(`The cart is Full ${cartqty = 0}`);
-         }else{ 
-        console.log( `Cart quantity : ${cartqty}`);}
+         show();
         ">
         Show Quantity
     </button>
 
     <button onclick="
      cartqty++;
-     console.log(`Cart Quantity: ${cartqty}`);
+      document.querySelector('.jsResult').innerHTML = cartqty;
     ">
         Add To Cart
     </button>
@@ -27,61 +24,71 @@
      if(cartqty < 0){
         console.log(`Not enough items in the cart`)
      }else{
-     console.log(`Cart Quantity: ${cartqty}`);}
+        document.querySelector('.jsResult').innerHTML = cartqty;
+    }
     ">
         Remove from Cart
     </button>
 
     <button onclick="
      cartqty += 2;
-     console.log(`Cart Quantity: ${cartqty}`);
+     document.querySelector('.jsResult').innerHTML = cartqty;
     ">
         +2
     </button>
 
     <button onclick="
      cartqty -= 2;
-     console.log(`Cart Quantity: ${cartqty}`);
+     document.querySelector('.jsResult').innerHTML = cartqty;
     ">
         -2
     </button>
 
     <button onclick="
     cartqty = cartqty + 3;
-    console.log(`Cart Quantity: ${cartqty}`);
+    document.querySelector('.jsResult').innerHTML = cartqty;
    ">
         +3
     </button>
 
     <button onclick="
     cartqty = cartqty - 3;
-    console.log(`Cart Quantity: ${cartqty}`);
+    document.querySelector('.jsResult').innerHTML = cartqty;
    ">
         -3
     </button>
 
     <button onclick="
      cartqty += 4;
-     console.log(`Cart Quantity: ${cartqty}`);
+     document.querySelector('.jsResult').innerHTML = cartqty;
     ">
         +4
     </button>
 
     <button onclick="
      cartqty += 5;
-     console.log(`Cart Quantity: ${cartqty}`);
+     document.querySelector('.jsResult').innerHTML = cartqty;
     ">
         +5
     </button>
 
     <button onclick="
     cartqty = 0;
-     console.log( `Cart Reset : ${cartqty}`);
+    document.querySelector('.jsResult').innerHTML = cartqty;
     ">
         Reset Cart
     </button>
+    <p class="jsResult"></p>
    <script>
          let cartqty = 0;
+
+         function show(){
+            if(cartqty > 10){
+            console.log(`The cart is Full ${cartqty = 0}`);
+         }else{ console.log( `Cart quantity : ${cartqty}`);
+    }
+        document.querySelector('.jsResult').innerHTML = cartqty;
+         }
    </script>
 </body>
 </html>

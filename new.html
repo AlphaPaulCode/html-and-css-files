@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Text Update</title>
+</head>
+<body>
+    <input id="jsInputText" placeholder="Type something">
+    <p id="jsOutputText">Your text will appear here</p>
+    
+    <script>
+        const inputElement = document.getElementById('jsInputText');
+        const outputElement = document.getElementById('jsOutputText');
+        
+        inputElement.addEventListener('input', function ne() {
+            outputElement.textContent = `You typed: ${inputElement.value}`;
+        });
+    </script>
+</body>
+</html>

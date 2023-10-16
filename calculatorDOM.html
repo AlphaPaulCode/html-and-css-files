@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+
+    <body>
+       <p>
+        <button onclick="addCalculation('1')">1</button>
+        <button onclick="addCalculation('2')">2</button>
+       </p>
+
+       <p>
+        <button onclick="addCalculation('3')">3</button>
+        <button onclick="addCalculation('4')">4</button>
+       </p>
+
+       <p>
+        <button onclick="addCalculation('5')">5</button>
+        <button onclick="addCalculation('6')">6</button>
+       </p>
+
+       <p>
+        <button onclick="addCalculation('7')">7</button>
+        <button onclick="addCalculation('8')">8</button>
+       </p>
+
+       <p>
+        <button onclick="addCalculation('9')">9</button>
+        <button onclick="addCalculation('+')">+</button>
+        <button onclick="addCalculation('-')">-</button>
+        <button onclick="addCalculation('/')">/</button>
+        <button onclick="addCalculation('*')">*</button>
+        <button onclick="calculateResult()">=</button>
+        <button onclick="Cleared()">C</button>
+       </p>
+
+       <p class="jsResult"></p>
+
+        <script>
+            let calculation = "";
+
+            JSON.parse(localStorage.getItem('calculation'));
+
+            function addCalculation(value) {
+                calculation += value;
+                document.querySelector('.jsResult').innerHTML = calculation
+            }
+
+            function calculateResult() {
+                try {
+                    calculation = eval(calculation);
+                } catch (error) {
+                    console.error("Error in calculation:", error);
+                }
+                document.querySelector('.jsResult').innerHTML = calculation
+            }
+
+            localStorage.setItem('calculation',JSON.stringify(calculation));
+            function Cleared(){
+                calculation = "";
+                console.log('Cleared');
+                alert('Cleared');
+            }
+        </script>
+    </body>
+</html>

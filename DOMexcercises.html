@@ -17,11 +17,15 @@
 
         <p class="jsResult"></p> -->
 
-        <input class="jsInputText" placeholder="Name">
+        <!-- <input class="jsInputText"
+        onkeydown="console.log(event.key); keys();"
+        placeholder="Name">
 
         <button 
         onclick="textInput()"
         class="jsSubmit">Submit</button>
+        <p class="outputMessage"></p> -->
+
         <script>
         // console.log(document.querySelector('button').innerHTML);
 
@@ -40,12 +44,20 @@
         //     `You Picked: Tails`
         // }
 
-        function textInput(){
-        let inputElement = document.querySelector('.jsInputText');
-        let prints = inputElement.value;
-        document.querySelector('.jsInputText').innerHTML = 
-        `Your name is ${prints}`;
-        }
+        // function textInput(){
+        // let inputElement = document.querySelector('.jsInputText');
+        // let prints = inputElement.value;
+        // document.querySelector('.outputMessage').innerHTML = 
+        // `Your name is ${prints}`;
+        // }
+
+        // function keys(){
+        //     if(event.key === 'Enter'){
+        //         textInput();
+        //     }
+        // }
+
+        
        
         </script>
     </body>
