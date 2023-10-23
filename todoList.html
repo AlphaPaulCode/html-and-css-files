@@ -32,11 +32,11 @@
 
         function renderTodoList(){
             let todoListHtml = '';
-        for(let i = 0; i < todoList.length; i++){
-            let todooObject = todoList[i];
+ for(let i = 0; i < todoList.length; i++){
+            let todoObject = todoList[i];
             // let name = todooObject.name;
             // let dueDate = todooObject.dueDate;
-            let {name, dueDate} = todooObject;
+            let {name, dueDate} = todoObject;
             let html  = `
             <p>
                 ${name} ${dueDate} 
