@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <title>Dynamic Text Update</title>
@@ -14,6 +14,30 @@
         inputElement.addEventListener('input', function ne() {
             outputElement.textContent = `You typed: ${inputElement.value}`;
         });
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Text Change</title>
+</head>
+<body>
+    <button id="myButton">Click me</button>
+
+    <script>
+        // Get a reference to the button element
+        const button = document.getElementById('myButton');
+
+        // Set up a function to change the button text
+        function changeButtonText() {
+            button.innerText = 'Finished';
+        }
+
+        // Use setTimeout to delay the text change by 1 second (1000 milliseconds)
+        setTimeout(changeButtonText, 1000);
     </script>
 </body>
 </html>
